@@ -1,4 +1,15 @@
-img {
+#disneyland {
+    height: 100vh;
+    width: 100vw;
+}
+
+#main_container {
     height: 100%;
     width: 100%;
+}
+
+.mouse {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
 }

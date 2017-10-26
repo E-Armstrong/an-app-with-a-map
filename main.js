@@ -1,11 +1,20 @@
 var mainVM = new Vue({
     el: "#app",
     data: {
-        curser: `<img class="marker" src="Micky_Mouse">`
+        markers: [] //`<img class="marker" src="Micky_Mouse">`
     },
     methods: {
-        startToLoveView: function() {
-            mainVM.title = this.newTitle
+        makeAMouse: function($event) {
+            //create marker at x and y
+            this.markers.push({
+                pageX: event.offsetX-10 + 'px',
+                pageY: event.offsetY-30 + 'px',
+            })
+            // return this.marker
+            // console.log($event)
+            // $event.pageX
+            // $event.page
+            // $event.bubbles: false
         }
     }
 })
