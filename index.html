@@ -8,11 +8,13 @@
     <body>
         <div id="app">
             <div v-on:click="makeAMouse()" id="main-container">
-                <img v-for="mice in markers" class="mouse" v-bind:style="{left : mice.pageX, top : mice.pageY } " src="Mickey_Mouse.png">
+                <div v-on:click="mouseTrap(mice, index, $event)" v-for="(mice, index) in markers" class="mouse" v-bind:style="{left : mice.pageX, top : mice.pageY } ">
+                    <img class="mouse" src="Mickey_Mouse.png">
+                </div> 
+                <!-- <img v-for="mice in markers" class="mouse" v-bind:style="{left : mice.pageX, top : mice.pageY } " src="Mickey_Mouse.png"> -->
+                
+                
                 <img id="disneyland" src="disneyland.png">
-
-
-
 
             </div>
         </div>

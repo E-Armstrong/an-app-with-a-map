@@ -15,6 +15,11 @@ var mainVM = new Vue({
             // $event.pageX
             // $event.page
             // $event.bubbles: false
+        },
+        mouseTrap: function(mouse, i, event) {
+            event.stopPropagation()
+            this.markers.splice(i, 1)
+
         }
     }
 })
